@@ -55,15 +55,15 @@
     <li><a href="https://www.javascripttutorial.net/javascript-dom/document-object-model-in-javascript/">script.js</a></li>
   </ul>
 </details>
-
+<br>
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- **No linter errors** <br>
-- **Use of correct GitHub flow**
-- **Documented in a professional way**
-- **Follow best practices for HTML, CSS and Javascript**
+> - **No linter errors** <br>
+> - **Use of correct GitHub flow**
+> - **Documented in a professional way**
+> - **Follow best practices for HTML, CSS and Javascript**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
