@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Awesome Books</title>
+    <script
+      src="https://kit.fontawesome.com/2649a194d9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav>
+      <!--add navbar which will dynamically hide other sections based on the click-->
+      <a class="logo" href="#">Awesome Books</a>
+      <ul class="menu">
+        <li id="list-link"><a href="#list">List</a></li>
+        <li id="add-new-link"><a href="#book-form">Add New</a></li>
+        <li id="contact-link"><a href="#contact-info">Contact</a></li>
+      </ul>
+    </nav>
+    <!--function the current date fetched dynamically-->
+    <section id="list">
+      <h1>All Awesome Books</h1>
+      <table>
+        <tbody id="table"></tbody>
+      </table>
+    </section>
+    <section id="book-form">
+      <h2>Add a new Book</h2>      
+      <form id="form">
+        <p id="error"></p>
+        <input id="book-title" type="text" placeholder="Title" required />
+        <input id="author" type="name" placeholder="Author" required />
+        <button type="submit" id="add">Add</button>
+      </form>
+    </section>
+    <section id="contact-info">
+      <h2>Contact information</h2>
+      <p>
+        Do you have any questions or you just want to say "Hello"?<br />You can
+        reach out to us!
+      </p>
+      <ul>
+        <li>Our email: mail@mail.com</li>
+        <li>Our phone number: 00435 2217 2248 26</li>
+        <li>Our address: Streetname 22, 84503 City, Country</li>
+      </ul>
+      <!--contact information page with address and emails-->
+    </section>
+    <footer>
+      <!--add copyrights-->
+      <a href="#"
+        >Copyrights<i class="fa-solid fa-copyright"></i>All rights reserved
+        2023</a
+      >
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
