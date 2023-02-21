@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#error {
+  color: red;
+}
+
+body {
+  width: 100%;
+  border: 3px solid #000;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 5rem;
+  margin: 0.2rem 3rem;
+  border: 3px solid #000;
+}
+
+.logo {
+  padding: 0.2rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+li {
+  padding: 0.2rem 0;
+  list-style-type: none;
+}
+
+.menu > li:nth-child(2) {
+  padding: 0.2rem 1.5rem;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #000;
+}
+
+footer a {
+  text-align: left;
+  padding: 0.2rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+li a {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+a:hover {
+  color: blue;
+  transform: scale(1.2);
+}
+
+section {
+  width: 60%;
+  margin: 3rem auto;
+}
+
+h1 {
+  font-size: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border: 3px solid black;
+  border-collapse: collapse;
+}
+
+tr td {
+  padding: 0.2rem;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(180, 176, 176);
+}
+
+input {
+  width: 100%;
+  padding: 0.2rem;
+  display: block;
+  margin-block: 1rem;
+  border: 3px solid black;
+}
+
+button {
+  padding: 0.3rem;
+  float: right;
+}
+
+#contact-info > p,
+#contact-info > li {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#contact-info > ul {
+  margin-left: 2rem;
+}
+
+#contact-info > ul > li {
+  list-style: circle;
+  padding: 0.4rem 0;
+}
+
+footer {
+  padding: 0.5rem 5rem;
+  margin: 5rem 3rem 0.2rem;
+  border: 3px solid #000;
+}
+
+footer a i {
+  font-size: 1rem;
+  padding: 0 0.2rem;
+}
