@@ -1,5 +1,6 @@
 import Book from './modules/storage.js';
 import displayBooks from './modules/displaybook.js';
+import hideSections from './modules/hidesection.js';
 
 const submitButton = document.getElementById('add');
 const bookTitle = document.getElementById('book-title');
@@ -20,16 +21,9 @@ const contactLink = document.getElementById('contact-link');
 const books = new Book();
 let bookListArray = books.getBook();
 
-// hide sections
-const hideSections = () => {
-  listSection.style.display = 'none';
-  newBookSection.style.display = 'none';
-  contactSection.style.display = 'none';
-};
-
 // operations to happen when page loads
 const initialize = () => {
-  hideSections();
+  hideSections(listSection, newBookSection, contactSection);
   listSection.style.display = 'block';
   displayBooks(displayBookList, bookListArray);
 };
@@ -49,7 +43,7 @@ submitButton.addEventListener('click', (e) => {
     error.innerHTML = '';
     books.addBook(author.value, bookTitle.value);
     bookListArray = books.getBook();
-    hideSections();
+    hideSections(listSection, newBookSection, contactSection);
     listSection.style.display = 'block';
     displayBooks(displayBookList, bookListArray);
   }
@@ -68,18 +62,18 @@ document.addEventListener('click', (e) => {
 
 listLink.addEventListener('click', (e) => {
   e.preventDefault();
-  hideSections();
+  hideSections(listSection, newBookSection, contactSection);
   listSection.style.display = 'block';
 });
 
 contactLink.addEventListener('click', (e) => {
   e.preventDefault();
-  hideSections();
+  hideSections(listSection, newBookSection, contactSection);
   contactSection.style.display = 'block';
 });
 
 addNewLink.addEventListener('click', (e) => {
   e.preventDefault();
-  hideSections();
+  hideSections(listSection, newBookSection, contactSection);
   newBookSection.style.display = 'block';
 });
