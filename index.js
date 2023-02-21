@@ -1,12 +1,10 @@
 import Book from './modules/storage.js';
 import displayBooks from './modules/displaybook.js';
 import hideSections from './modules/hidesection.js';
+import addBookForm from './modules/addbook.js';
 
 const submitButton = document.getElementById('add');
-const bookTitle = document.getElementById('book-title');
-const author = document.getElementById('author');
 const form = document.getElementById('form');
-const error = document.getElementById('error');
 const displayBookList = document.getElementById('table');
 
 const listSection = document.getElementById('list');
@@ -33,20 +31,7 @@ initialize();
 // add book from form
 submitButton.addEventListener('click', (e) => {
   e.preventDefault();
-  const checkBooks = bookListArray.find((book) => book.title === bookTitle.value);
-  const checkAuthor = bookListArray.find((book) => book.author === author.value);
-  if (bookTitle.value.length === 0 || author.value.length === 0) {
-    error.innerText = 'Fields cannot be empty!';
-  } else if (checkBooks && checkAuthor) {
-    error.innerText = 'This book already exists!!';
-  } else {
-    error.innerHTML = '';
-    books.addBook(author.value, bookTitle.value);
-    bookListArray = books.getBook();
-    hideSections(listSection, newBookSection, contactSection);
-    listSection.style.display = 'block';
-    displayBooks(displayBookList, bookListArray);
-  }
+  addBookForm(bookListArray, books, displayBookList);
   form.reset();
 });
 
