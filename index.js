@@ -21,7 +21,8 @@ const contactLink = document.getElementById('contact-link');
 
 const displayDate = () => {
   const date = document.getElementById('current-date');
-  date.innerHTML = DateTime.now();
+  const dateNow = DateTime.now();
+  date.innerHTML = dateNow.toJSDate();
 };
 
 displayDate();
