@@ -3,8 +3,6 @@ import Book from './modules/storage.js';
 import displayBooks from './modules/displaybook.js';
 import hideSections from './modules/hidesection.js';
 
-// const currentTime = document.getElementById('current-date');
-
 const submitButton = document.getElementById('add');
 const displayBookList = document.getElementById('table');
 
