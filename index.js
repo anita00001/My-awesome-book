@@ -1,6 +1,9 @@
+import { DateTime } from './modules/luxon.js';
 import Book from './modules/storage.js';
 import displayBooks from './modules/displaybook.js';
 import hideSections from './modules/hidesection.js';
+
+// const currentTime = document.getElementById('current-date');
 
 const submitButton = document.getElementById('add');
 const displayBookList = document.getElementById('table');
@@ -17,6 +20,13 @@ const contactSection = document.getElementById('contact-info');
 const listLink = document.getElementById('list-link');
 const addNewLink = document.getElementById('add-new-link');
 const contactLink = document.getElementById('contact-link');
+
+const displayDate = () => {
+  const date = document.getElementById('current-date');
+  date.innerHTML = DateTime.now();
+};
+
+displayDate();
 
 // Instantiate book class
 const books = new Book();
