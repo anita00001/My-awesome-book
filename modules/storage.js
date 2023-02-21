@@ -6,7 +6,7 @@ class Book {
   }
 
   // add books
-  addBook(author, title) {
+  addBook = (author, title) => {
     const updatedBook = [
       ...this.booksList,
       { id: `${Math.random()}${author.split(' ')[0]}`, author, title },
@@ -15,18 +15,16 @@ class Book {
   }
 
   // remove books
-  removeBook(id) {
+  removeBook = (id) => {
     const updatedBook = this.booksList.filter((it) => it.id !== id);
     this.updateStorage(updatedBook);
   }
 
   // Get books
-  getBook() {
-    return this.booksList;
-  }
+  getBook = () => this.booksList
 
   // update storage
-  updateStorage(data) {
+  updateStorage = (data) => {
     localStorage.setItem('storage-book', JSON.stringify(data));
     this.booksList = data;
   }
