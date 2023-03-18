@@ -80,6 +80,7 @@ section {
 }
 
 h1 {
+  text-align: center;
   font-size: 3rem;
   padding-bottom: 1.5rem;
 }
@@ -124,7 +125,7 @@ button {
 }
 
 #contact-info > ul {
-  margin-left: 2rem;
+  margin-left: 16rem;
 }
 
 #contact-info > ul > li {
@@ -133,6 +134,9 @@ button {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 25%;
   padding: 0.5rem 5rem;
   margin: 5rem 3rem 0.2rem;
   border: 3px solid #000;
